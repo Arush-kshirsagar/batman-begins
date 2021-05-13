@@ -9,7 +9,7 @@ var drops=[];
 var rand;
 var maximumDrop=100;
 var thunderCreatedFrame=0;
-var man,thunderbolt1,thunderbolt2,thunderbolt3,thunderbolt4,manimg,manwalking,umbrella;
+var man,thunder,thunderbolt1,thunderbolt2,thunderbolt3,thunderbolt4,manimg,manwalking,umbrella;
 
 function preload(){
  thunderbolt1=loadImage("thunderbolt/1.png");
@@ -41,7 +41,7 @@ function draw(){
     Engine.update(engine);
    
     rand=Math.round(random(1,4))
-    if(frameCount%80!=0){
+    if(frameCount%80===0){
         thunderCreatedFrame=frameCount
         thunder=createSprite(random(10,370),random(10,30),10,10)
         switch(rand){
